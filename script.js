@@ -121,3 +121,43 @@ div.classList.toggle("active"); // - if div doesnt have class "active" - add it,
 
 // Adding text content
 
+
+div.textContent = "Hello World!"; // - creates a text node containing "Hello World" and inserts it in div
+
+
+// Adding HTML element 
+
+
+div.innerHTML = "<span> Hello World </span>";
+
+// Using textContent is preferred over innerHTML for adding text, as innerHTML should be used sparingly to 
+// avoid potential security risks. 
+
+
+// Example of DOM usage
+
+// HTML file: 
+// <body>
+//   <h1>THE TITLE OF YOUR WEBPAGE</h1>
+//   <div id="container"></div>
+// </body>
+
+// JavaScript file
+
+const container1 = document.querySelector("#container"); // - getting reference to existed container
+const content = document.createElement("div"); // - creating a new div and storing it in variable content
+content.classList.add("content"); // - adding class to newly created div
+content.textContent = "This is the glorious text-content!"; // - adding some text content to the created div
+container1.appendChild(content); // -  append all above made changes and div itself
+
+// result in DOM ( JS doesnt alter HTML, it will look the same, but the changes will be rendered in browser):
+
+// DOM tree
+//  <body>
+//   <h1>THE TITLE OF YOUR WEBPAGE</h1>
+//   <div id="container">
+//     <div class="content">This is the glorious text-content!</div>
+//   </div>
+// </body> 
+
+
