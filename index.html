@@ -5,13 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM and Events</title>
-    <script src="script.js" defer></script>
+    <!-- <script src="dom.js" defer></script> -->
+    <script src="events.js" defer></script>
 
 </head>
 
 <body>
 
+<!-- Method 1 -->
 
+<button onclick="alert(`Hello World`)">Click Me</button>
+
+<!-- This solution is less than ideal because we’re cluttering our HTML with JavaScript. Also, we can only set 
+one “onclick” property per DOM element, so we’re unable to run multiple separate functions in response to a 
+click event using this method. -->
+
+
+<button id="btn"> Click Me</button>
+<button id="btnToo"> Click Me</button>
+<button id="btnForE"> Click Me</button>
+
+<div id="container">
+  <button id="one">Click Me</button>
+  <button id="two">Click Me</button>
+  <button id="three">Click Me</button>
+</div>
 
 </body>
 
